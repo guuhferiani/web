@@ -11,12 +11,14 @@
 body {
     background-color: rgb(39, 39, 39);
 }
+
 a {
     color: whitesmoke;
+    text-decoration: none;
 }
 
 ul {
-    color: white;
+    list-style: none;
 }
 
 html[data-theme='dark'] .logo {
@@ -34,7 +36,34 @@ html[data-theme='dark'] .logo {
 
 .logo { /* logo  */
     width: 56px;  /* largura */
-    height: 56px; /* auto */   /* altura */
-    
+    height: auto; /* auto */   /* altura */
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#toggleTheme {
+    color: whitesmoke; /* cor texto */
+    font-size: 20px; /* 16 ~ 20 */
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+/* menu desktop */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    text-transform: uppercase;
 }
 
