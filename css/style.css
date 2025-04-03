@@ -100,6 +100,7 @@ html[data-theme='dark'] .logo {
 
 .menu-link {
     display: flex;
+
 }
 
 
@@ -123,9 +124,26 @@ html[data-theme='dark'] .logo {
 }
 
 .menu-mobile {
-    bottom: 0;
     position: fixed;
+    bottom: 0;
+    width: 100vw; /* VW = viewPort - Width */
+    justify-content: space-between;
+    border-top: 1px solid #989898;
+    z-index: 1; /*  */
 }
+
+.menu-link.active .menu-icone,
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-icone,
+.menu-link:hover .menu-texto {
+    color: red;
+}
+
+
+
+
+
+
 
 /* CSS Responsivo */
 @media (min-width: 768px) {
@@ -142,8 +160,6 @@ html[data-theme='dark'] .logo {
         display: none;
     }
 }
-
-
 
 
 
