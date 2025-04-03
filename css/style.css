@@ -132,11 +132,18 @@ html[data-theme='dark'] .logo {
     z-index: 1; /*  */
 }
 
-.menu-link.active .menu-icone,
+.menu-link.active .icone-link,
 .menu-link.active .menu-texto,
-.menu-link:hover .menu-icone,
+.menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
     color: red;
+    font-weight: 600;
+}
+
+.icone-link,
+.menu-texto {
+    color: #6a6a6a;
+    font-weight: 600;
 }
 
 
