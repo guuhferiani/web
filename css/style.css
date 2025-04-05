@@ -42,7 +42,6 @@ body {
 a {
     color:white;
     text-decoration: none;
-
 }
 
 
@@ -55,7 +54,28 @@ html[data-theme='dark'] .logo {
     filter: invert(1);
 }
 
+h1 {
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 3px;
+}
 
+p,
+li, 
+span {
+  font-size: 18px; 
+}
+p {
+    text-align: justify;
+    font-family: "Inter", sans-serif;
+}
+
+strong {
+    font-weight: 800;
+}
+
+/* Header */
 #header {
     display: flex; 
     flex-flow: row wrap;
@@ -149,8 +169,54 @@ html[data-theme='dark'] .logo {
 .icone-link {
     font-size: 25px;
 }
+/* Fim CSS do Menu */
 
+/* Home / Main */
 
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid white;
+}
+
+.btn span,
+.btn i {
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    transition: all ease-in-out .4s;
+}
 
 
 
