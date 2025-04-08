@@ -1,6 +1,20 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
 
+/* Variaveis para cores */
+
+/* Definir cores tema Dark */
+:root,
+:root[data-theme="dark"] {
+    --fundo-header: red;
+}
+
+/* Definir cores tema Light */
+:root[data-theme="light"] {
+    --fundo-header: green;
+}
+
+
 /* 
 
 Root Font
@@ -30,7 +44,6 @@ Inter:
     padding: 0;
     box-sizing: border-box; /*  */
     scrollbar-width: thin;
-    scrollbar-color: red;
 }
 
 body {
@@ -103,7 +116,6 @@ strong {
     font-size: 20px;
     cursor: pointer;
     transition: all 0.6s ease-in-out; 
-
 }
 
 
@@ -150,6 +162,7 @@ strong {
     justify-content: space-between;
     border-top: 1px solid #989898;
     z-index: 1; /*  */
+    background: rgb(39, 39, 39);
 }
 
 .menu-link.active .icone-link,
@@ -209,7 +222,7 @@ strong {
 
 .btn span,
 .btn i {
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
 }
 
@@ -218,11 +231,43 @@ strong {
     transition: all ease-in-out .4s;
 }
 
+.btn:hover span,
+.btn:hover i {
+    color: red;
+}
+
+.icon-social {
+    font-size: 25px;
+    color: #989898;
+}
+
+.icon-social:hover {
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* Estrutura */
+
+/* ATUALIZAÇÕES FUTURAS */
+#home {
+    padding: 40px 16px;
+}
 
 
 
 /* CSS Responsivo */
 @media (min-width: 768px) {
+    #header {
+        background-color: yellow;
+        background-color: var();
+        position: fixed;
+        border-bottom: 1px solid #989898;
+        padding: 16px 96px;
+    }
     .header-nav {
         display: flex;
     }
@@ -235,8 +280,25 @@ strong {
     .nav-mobile {
         display: none;
     }
+    
+    #home { /* Atualização futura */
+        padding: 128px 96px 64px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 
+/* 1200px */
+@media (min-width: 1200px) {
+    #home {
+        padding: 160px 96px 32px;
+    }
+}
 
 
 
