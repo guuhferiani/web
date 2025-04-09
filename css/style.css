@@ -6,13 +6,21 @@
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
-    --fundo-header: red;
+
+    --bg: rgb(39, 39, 39); /* Cor Fundo */
+    --color: rgb(206, 206, 206); /* Cor Textos */
+    --hover: rgb(243, 243, 243);
+        
 }
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
-    --fundo-header: green;
+
+    --bg: rgb(206, 206, 206); /* Cor Fundo */
+    --color: rgb(39, 39, 39); /* Cor Textos */
+    --hover: rgb(5, 5, 5);
 }
+
 
 
 /* 
@@ -47,13 +55,13 @@ Inter:
 }
 
 body {
-    background-color: rgb(39, 39, 39);
-    color: whitesmoke;
+    background-color: var(--bg);
+    color: var(--color);
 }
 
 
 a {
-    color:white;
+    color: var(--color);
     text-decoration: none;
 }
 
@@ -112,10 +120,10 @@ strong {
 
 
 #toggleTheme {
-    color: white;
+    color: var(--color);
     font-size: 20px;
     cursor: pointer;
-    transition: all 0.6s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -160,16 +168,16 @@ strong {
     bottom: 0;
     width: 100vw; /* VW = viewPort - Width */
     justify-content: space-between;
-    border-top: 1px solid #989898;
+    border-top: 1px solid var(--color);
     z-index: 1; /*  */
-    background: rgb(39, 39, 39);
+    background-color: var(--bg);
 }
 
 .menu-link.active .icone-link,
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: red;
+    color: var(--hover);
     font-weight: 600;
 }
 
@@ -217,23 +225,27 @@ strong {
 }
 
 .btn-primary {
-    border: 1px solid white;
+    border: 1px solid var(--color);
+}
+
+.btn-primary:hover {
+    border: 1px solid var(--bg);
 }
 
 .btn span,
 .btn i {
-    color: #ffffff;
+    color: var(--color);
     font-size: 16px;
 }
 
 .btn:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     transition: all ease-in-out .4s;
 }
 
 .btn:hover span,
 .btn:hover i {
-    color: red;
+    color: var(--hover);
 }
 
 .icon-social {
@@ -242,10 +254,8 @@ strong {
 }
 
 .icon-social:hover {
-    color: #ffffff;
+    color: var(--hover);
 }
-
-
 
 
 
@@ -262,7 +272,7 @@ strong {
 /* CSS Responsivo */
 @media (min-width: 768px) {
     #header {
-        background-color: var(--fundo-header);
+        background-color: var(--bg);
         position: fixed;
         border-bottom: 1px solid #989898;
         padding: 16px 96px;
