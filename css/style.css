@@ -262,8 +262,7 @@ strong {
 /* CSS Responsivo */
 @media (min-width: 768px) {
     #header {
-        background-color: yellow;
-        background-color: var();
+        background-color: var(--fundo-header);
         position: fixed;
         border-bottom: 1px solid #989898;
         padding: 16px 96px;
