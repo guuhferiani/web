@@ -263,7 +263,7 @@ strong {
 /* Estrutura */
 
 /* ATUALIZAÇÕES FUTURAS */
-#home {
+#home, .projetos {
     padding: 40px 16px;
 }
 
@@ -290,7 +290,7 @@ strong {
         display: none;
     }
     
-    #home { /* Atualização futura */
+    #home, .projetos { /* Atualização futura */
         padding: 128px 96px 64px;
     }
 
@@ -306,6 +306,30 @@ strong {
 @media (min-width: 1200px) {
     #home {
         padding: 160px 96px 32px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 65px;
+    }
+    
+    p, span, li {
+        font-size: 20px;
+    }
+} /* fim 1200px */
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    .projetos {
+        padding: 160px 240px 64px;
     }
 }
 
