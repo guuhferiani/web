@@ -10,7 +10,7 @@
     --bg: rgb(39, 39, 39); /* Cor Fundo */
     --color: rgb(206, 206, 206); /* Cor Textos */
     --hover: rgb(243, 243, 243);
-        
+    --sombra: rgb(226, 226, 226);
 }
 
 /* Definir cores tema Light */
@@ -19,9 +19,8 @@
     --bg: rgb(206, 206, 206); /* Cor Fundo */
     --color: rgb(39, 39, 39); /* Cor Textos */
     --hover: rgb(5, 5, 5);
+    --sombra: rgb(37, 37, 37);
 }
-
-
 
 /* 
 
@@ -54,6 +53,14 @@ Inter:
     scrollbar-width: thin;
 }
 
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);
     color: var(--color);
@@ -70,11 +77,6 @@ ul {
     list-style: none;
 }
 
-
-html[data-theme='dark'] .logo {
-    filter: invert(1);
-}
-
 h1 {
     font-size: 40px;
     font-weight: 200;
@@ -82,11 +84,30 @@ h1 {
     letter-spacing: 3px;
 }
 
+h2 {
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
 p,
 li, 
 span {
   font-size: 18px; 
 }
+
 p {
     text-align: justify;
     font-family: "Inter", sans-serif;
@@ -258,9 +279,57 @@ strong {
 }
 
 
-
-
 /* Estrutura */
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-img {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 0px 5px var(--sombra);
+}
+
+.card-description {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.icon-list {
+    color: #05a2e5;
+    font-size: 14px;
+}
+
+.card-item { 
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+/* CARD BODY AMANHÃ */
+
 
 /* ATUALIZAÇÕES FUTURAS */
 #home, .projetos {
@@ -300,6 +369,20 @@ strong {
         align-items: flex-start;
     }
 
+} /* Fim 768 */
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    .card-img {
+        width: 55%;
+    }
 }
 
 /* 1200px */
