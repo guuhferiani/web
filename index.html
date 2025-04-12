@@ -15,6 +15,10 @@
     <!-- fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -54,9 +58,9 @@
         </nav> <!-- Fim Menu desktop -->
 
         <!-- Logo -->
-        <div>
+        <div data-aos="zoom-in">
             <a href="#home">
-                <img src="img/logo.png" alt="" class="logo">
+                <img src="img/logo.png" alt="" class="logo" >
             </a>
         </div>
 
@@ -107,14 +111,14 @@
 
         <div class="main-content">
 
-            <h1>
+            <h1 data-aos="zoom-in" data-aos-delay="1000">
                 <strong>
                     Soluções Digitais &
                 </strong>
                 Desenvolvimento Front-End.
             </h1>
 
-            <p>Gustavo Feriani - SP, Desenvolvedor e Instrutor Front-End.</p>
+            <p data-aos="fade-right" data-aos-delay="3000"> Gustavo Feriani - SP, Desenvolvedor e Instrutor Front-End.</p>
 
             <ul class="menu menu-social">
                 <li>
@@ -157,14 +161,13 @@
                 </button>
             </a>
             
-            <div class="video">
-    
-                <iframe src="https://www.youtube.com/embed/5nEyjYn9_LI?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H" title="HACKING GOOGLE: Series Trailer (:30)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-            </div>
-
+            
         </div> <!-- Fim main content -->
+        <div class="video">
 
+            <iframe src="https://www.youtube.com/embed/5nEyjYn9_LI?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H" title="HACKING GOOGLE: Series Trailer (:30)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
 
     </main>
 
@@ -229,18 +232,18 @@
                     <ul class="card-lista">
                         
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i>
                             Tecnologia
+                            <i class="icon-list bi bi-chevron-double-left"></i>
                         </li>
 
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i>
                             Literatura
+                            <i class="icon-list bi bi-chevron-double-left"></i>
                         </li>
 
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i> 
                             Romance
+                            <i class="icon-list bi bi-chevron-double-left"></i>
                         </li>
                     
                     </ul>
@@ -296,11 +299,16 @@
     </section>
 
 
-    
-
-
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/script.js"> </script>
+
+    <script>
+        AOS.init({
+            duration: 900,
+        });
+    </script>
 
 </body>
 

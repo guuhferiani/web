@@ -7,8 +7,10 @@
 :root,
 :root[data-theme="dark"] {
 
-    --bg: rgb(39, 39, 39); /* Cor Fundo */
-    --color: rgb(206, 206, 206); /* Cor Textos */
+    --bg: rgb(39, 39, 39);
+    /* Cor Fundo */
+    --color: rgb(206, 206, 206);
+    /* Cor Textos */
     --hover: rgb(243, 243, 243);
     --sombra: rgb(226, 226, 226);
 }
@@ -16,8 +18,10 @@
 /* Definir cores tema Light */
 :root[data-theme="light"] {
 
-    --bg: rgb(206, 206, 206); /* Cor Fundo */
-    --color: rgb(39, 39, 39); /* Cor Textos */
+    --bg: rgb(206, 206, 206);
+    /* Cor Fundo */
+    --color: rgb(39, 39, 39);
+    /* Cor Textos */
     --hover: rgb(5, 5, 5);
     --sombra: rgb(37, 37, 37);
 }
@@ -49,7 +53,8 @@ Inter:
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*  */
+    box-sizing: border-box;
+    /*  */
     scrollbar-width: thin;
 }
 
@@ -103,9 +108,9 @@ h3 {
 
 
 p,
-li, 
+li,
 span {
-  font-size: 18px; 
+    font-size: 18px;
 }
 
 p {
@@ -119,18 +124,19 @@ strong {
 
 /* Header */
 #header {
-    display: flex; 
+    display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10px 20px;
+    z-index: 999999;
 }
 
 /* Logo */
 .logo {
     width: 80px;
-    height: auto; 
+    height: auto;
 }
 
 
@@ -165,8 +171,8 @@ strong {
 }
 
 
-.menu-texto{
-    font-size: 12px; 
+.menu-texto {
+    font-size: 12px;
     text-transform: uppercase;
     font-family: "Outfit", sans-serif;
     font-weight: 300;
@@ -181,16 +187,18 @@ strong {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8px 16px;      
+    padding: 8px 16px;
 }
 
 .menu-mobile {
     position: fixed;
     bottom: 0;
-    width: 100vw; /* VW = viewPort - Width */
+    width: 100vw;
+    /* VW = viewPort - Width */
     justify-content: space-between;
     border-top: 1px solid var(--color);
-    z-index: 1; /*  */
+    z-index: 1;
+    /*  */
     background-color: var(--bg);
 }
 
@@ -211,6 +219,7 @@ strong {
 .icone-link {
     font-size: 25px;
 }
+
 /* Fim CSS do Menu */
 
 /* Home / Main */
@@ -321,24 +330,33 @@ strong {
     font-size: 14px;
 }
 
-.card-item { 
+.card-item {
     margin-left: 10px;
     font-size: 20px;
     margin-bottom: 5px;
     font-family: "Inter", sans-serif;
 }
 
-/* CARD BODY AMANHÃ */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
 
 
 /* ATUALIZAÇÕES FUTURAS */
-#home, .projetos {
+#home,
+.projetos {
     padding: 40px 16px;
 }
 
 
 
 /* CSS Responsivo */
+/* min-width = a partir de -->  */
+
 @media (min-width: 768px) {
     #header {
         background-color: var(--bg);
@@ -346,6 +364,7 @@ strong {
         border-bottom: 1px solid #989898;
         padding: 16px 96px;
     }
+
     .header-nav {
         display: flex;
     }
@@ -358,8 +377,10 @@ strong {
     .nav-mobile {
         display: none;
     }
-    
-    #home, .projetos { /* Atualização futura */
+
+    #home,
+    .projetos {
+        /* Atualização futura */
         padding: 128px 96px 64px;
     }
 
@@ -369,15 +390,26 @@ strong {
         align-items: flex-start;
     }
 
-} /* Fim 768 */
+}
+
+/* Fim 768 */
 
 @media (min-width: 992px) {
     .projeto-card {
         flex-direction: row;
     }
+
     .projeto-card.card-reverse {
         flex-direction: row-reverse;
         justify-content: end;
+    }
+
+    .card-reverse .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
     }
 
     .card-img {
@@ -398,23 +430,37 @@ strong {
     h2 {
         font-size: 65px;
     }
-    
-    p, span, li {
+
+    p,
+    span,
+    li {
         font-size: 20px;
     }
-} /* fim 1200px */
+}
+
+/* fim 1200px */
 
 @media (min-width: 1400px) {
     h1 {
         font-size: 100px;
     }
+
     h2 {
         font-size: 70px;
     }
+
     .projetos {
         padding: 160px 240px 64px;
     }
 }
 
-
-
+/*  largura até: = x */
+@media (max-width: 992px) {
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
