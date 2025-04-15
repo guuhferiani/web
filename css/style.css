@@ -344,12 +344,34 @@ strong {
     align-items: start;
 }
 
-
-
 /* ATUALIZAÇÕES FUTURAS */
 #home,
-.projetos {
+.projetos,
+.sobre {
     padding: 40px 16px;
+}
+
+/* Sobre */
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sobre-perfil {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid #cacaca;
+}
+
+.sobre-content1,
+.sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 80px;
 }
 
 
@@ -379,7 +401,8 @@ strong {
     }
 
     #home,
-    .projetos {
+    .projetos,
+    .sobre {
         /* Atualização futura */
         padding: 128px 96px 64px;
     }
@@ -449,7 +472,8 @@ strong {
         font-size: 70px;
     }
 
-    .projetos {
+    .projetos,
+    .sobre {
         padding: 160px 240px 64px;
     }
 }
