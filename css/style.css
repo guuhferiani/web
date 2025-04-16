@@ -420,6 +420,27 @@ strong {
     gap: 10px;
 }
 
+.row2 .sobre-lista li {
+    margin-bottom: 5px;
+}
+
+
+/* Accordion */
+.accordion-header {
+    width: 100%;
+    border: 1px solid var(--color);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 8px 16px; 
+    align-items: center;
+    transition: ease-in-out .5s;
+}
+
+
+
+
 /* CSS Responsivo */
 /* min-width = a partir de -->  */
 
@@ -506,7 +527,8 @@ strong {
 
 /* 1200px */
 @media (min-width: 1200px) {
-    #home {
+    #home,
+    .sobre {
         padding: 160px 96px 32px;
     }
 
@@ -527,6 +549,7 @@ strong {
     .descricao-button .btn {
         width: auto;
     }
+
 }
 
 /* fim 1200px */
@@ -553,6 +576,9 @@ strong {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .sobre {
+        padding: 0 96px;
     }
     
 }
