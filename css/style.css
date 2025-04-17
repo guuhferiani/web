@@ -424,8 +424,12 @@ strong {
     margin-bottom: 5px;
 }
 
-
 /* Accordion */
+
+/* .accordion {
+    display: flexbox;
+} */
+
 .accordion-header {
     width: 100%;
     border: 1px solid var(--color);
@@ -437,6 +441,36 @@ strong {
     align-items: center;
     transition: ease-in-out .5s;
 }
+
+.accordion-header span,
+.accordion-header i {
+    color: var(--color);
+    /* text-transform: capitalize; */
+}
+
+.accordion-body {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--color);
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--color);
+} 
+
+.accordion-item.active .accordion-header span,
+.accordion-item.active .accordion-header i {
+    color: var(--bg);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+
 
 
 
@@ -511,7 +545,7 @@ strong {
     .sobre-content1,
     .sobre-content2 {
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 40% 52%;
         justify-content: flex-start;
         gap: 64px;
     }
@@ -579,6 +613,11 @@ strong {
     }
     .sobre {
         padding: 0 96px;
+    }
+    .sobre-perfil {
+        width: 50%;
+        margin-left: 25%;
+        align-items: center;
     }
     
 }
