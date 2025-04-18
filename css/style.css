@@ -421,7 +421,8 @@ strong {
 }
 
 .row2 .sobre-lista li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 /* Accordion */
@@ -470,8 +471,30 @@ strong {
     display: flex;
 }
 
+/* Contato */
 
 
+/* Roda Pé */
+footer {
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+footer a {
+    color: #989898;
+}
+
+footer i:hover, 
+footer a:hover {
+    color: #05a2e5;
+    transition: ease-in-out .5s;
+}
 
 
 
