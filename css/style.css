@@ -279,7 +279,7 @@ strong {
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: all ease-in-out .4s;
 }
 
@@ -357,7 +357,8 @@ strong {
 /* ATUALIZAÇÕES FUTURAS */
 #home,
 .projetos,
-.sobre {
+.sobre, 
+.contato {
     padding: 40px 16px;
 }
 
@@ -472,7 +473,32 @@ strong {
 }
 
 /* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
 
+.contato p {
+    text-align: justify;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 0 140px;
+}
+
+.contato span {
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.menu-link:hover span,
+.menu-link:hover i {
+    color: var(--hover);
+}
 
 /* Roda Pé */
 footer {
