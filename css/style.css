@@ -500,6 +500,52 @@ strong {
     color: var(--hover);
 }
 
+/* Forms */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    background: #989898;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.form-contato label {
+    color: #252525;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+}
+
+.form-contato input, 
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: var(--bg);
+    background: #d8d5d5;
+    border-radius: 6px;
+    border: 1px solid #cacaca; 
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.form-contato input:focus, 
+.form-contato textarea:focus {
+    border-color: var(--bg);
+    box-shadow: 0 0 5px #7c7c7c;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
 /* Roda Pé */
 footer {
     margin-bottom: 60px;
