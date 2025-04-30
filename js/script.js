@@ -5,7 +5,7 @@ const accordionHeader = document.querySelectorAll(".accordion-header");
 const menuLinks = document.querySelectorAll(".menu-link")
 
 
-function changeTheme () {
+function changeTheme() {
 
     const currentTheme = rootHtml.getAttribute("data-theme");
 
@@ -29,9 +29,46 @@ accordionHeader.forEach(header => {
     })
 })
 
-menuLinks.forEach(item => { 
-    item.addEventListener("click", () =>{ 
+menuLinks.forEach(item => {
+    item.addEventListener("click", () => {
         menuLinks.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
     })
 })
+
+const form = document.querySelector(".form-contato");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault(); //impede a atualização da Página.
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    try {
+        let response = await fetch(action, {
+            method: "POST",
+            body: formData,
+            header: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            alert("Mensagem enviada com Sucesso!");
+            form.reset();
+        }
+        else {
+            alert("Erro ao Enviar a mensagem. Tente novamente.");
+        }
+    }
+    catch (error) {
+        alert("Erro de Conexão. Verifique sua internet.");
+    }
+});
+
+window.addEventListener('load', () => {
+    AOS.init({  //instancia
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: true,
+    })
+});
