@@ -36,6 +36,7 @@ menuLinks.forEach(item => {
     })
 })
 
+// Envio do Formulário com Limpeza dos Campos
 const form = document.querySelector(".form-contato");
 
 form.addEventListener("submit", async function (event) {
@@ -48,21 +49,21 @@ form.addEventListener("submit", async function (event) {
         let response = await fetch(action, {
             method: "POST",
             body: formData,
-            header: { "Accept": "application/json" }
+            headers: {"Accept": "application/json"}
         });
 
         if (response.ok) {
             alert("Mensagem enviada com Sucesso!");
             form.reset();
-        }
+        } 
         else {
-            alert("Erro ao Enviar a mensagem. Tente novamente.");
+            alert("Erro ao enviar a mensagem. Tente novamente.");
         }
-    }
-    catch (error) {
-        alert("Erro de Conexão. Verifique sua internet.");
+    } catch (error) {
+        alert("Erro de conexão. Verifique sua internet.");
     }
 });
+
 
 window.addEventListener('load', () => {
     AOS.init({  //instancia

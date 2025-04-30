@@ -487,7 +487,7 @@ strong {
     text-align: justify;
     margin-top: 50px;
     font-size: 20px;
-    padding: 0 140px;
+    width: 80%;
 }
 
 .contato span {
@@ -499,6 +499,15 @@ strong {
 .menu-link:hover i {
     color: var(--hover);
 }
+
+
+.contato .menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
 
 /* Forms */
 .form-contato {
@@ -605,6 +614,18 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+    
+    .contato {
+        padding: 96px;
+    }
+
+    .contato p {
+        text-align: center;
+    }
+    
+    footer {
+        margin: 0;
     }
 
 }
@@ -713,6 +734,11 @@ footer a:hover {
         width: 50%;
         margin-left: 25%;
         align-items: center;
+    }
+    
+    .contato .menu {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
     
 }
