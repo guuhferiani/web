@@ -578,6 +578,68 @@ footer a:hover {
 }
 
 
+/* Carousel */
+
+.carousel {
+    width: 80%;
+    max-height: 70vw;
+    height: 60vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    margin: 20px auto;
+
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.carousel input {
+    display: none;
+}
+
+#slide1:checked ~ .slides {transform: translateX(0);}
+#slide2:checked ~ .slides {transform: translateX(-33.33%);}
+#slide3:checked ~ .slides {transform: translateX(-66.66%);}
+
+.navigation {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+    opacity: 0.6;
+}
+
+.navigation label:hover,
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"]  {
+    background: red;
+    opacity: 1;
+}
+
 
 /* CSS Responsivo */
 /* min-width = a partir de -->  */
